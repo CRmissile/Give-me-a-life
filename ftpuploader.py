@@ -4,8 +4,8 @@ import fileinput
 
 ftp = FTP()
 ftp.set_debuglevel(2)
-ftp.connect('crmissile.hopto.org', 21) 
-ftp.login('logger','logger')
+ftp.connect('ftpserver', 21) 
+ftp.login('username','passphrase')
 
 ftp.cwd('/')
 
