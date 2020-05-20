@@ -25,8 +25,14 @@ echo "Creating minecraft server directory..."
 mkdir minecraft1
 cd minecraft1
 
-echo "Getting latest Paper Minecraft server..."
+echo "Getting Spigot 1.14.4 Minecraft server..."
 wget -O spigot-1.14.4.jar https://cdn.getbukkit.org/spigot/spigot-1.14.4.jar
+
+echo "Getting BuildTools"
+wget -O BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+
+echo "Updating BuildTools for 1.14.4"
+java -Xmx512M -jar BuildTools.jar --rev 1.14.4
 
 echo "Building the Minecraft server... "
 java -jar -Xms800M -Xmx800M spigot-1.14.4.jar
