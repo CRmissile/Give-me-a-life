@@ -44,18 +44,18 @@ echo "Accepting the EULA... "
 echo eula=true > eula.txt
 
 echo "Grabbing start.sh from repository... "
-wget -O start.sh https://raw.githubusercontent.com/CRmissile/Give-me-a-life/minecraft/start.sh
+wget -O start.sh https://raw.githubusercontent.com/CRmissile/Give-me-a-life/minecraft-with-user-yann/start.sh
 chmod +x start.sh
 
 echo "Oh wait. Checking for total memory available..."
 TotalMemory=$(awk '/MemTotal/ { printf "%.0f\n", $2/1024 }' /proc/meminfo)
 if [ $TotalMemory -lt 3000 ]; then
   echo "Sorry, have to grab low spec start.sh from repository... "
-  wget -O start.sh https://raw.githubusercontent.com/CRmissile/Give-me-a-life/minecraft/start_lowspec.sh
+  wget -O start.sh https://raw.githubusercontent.com/CRmissile/Give-me-a-life/minecraft-with-user-yann/start_lowspec.sh
 fi
 
 echo "Grabbing restart.sh from repository... "
-wget -O restart.sh https://raw.githubusercontent.com/CRmissile/Give-me-a-life/minecraft/restart.sh
+wget -O restart.sh https://raw.githubusercontent.com/CRmissile/Give-me-a-life/minecraft-with-user-yann/restart.sh
 chmod +x restart.sh
 
 echo "Enter a name for your server "
